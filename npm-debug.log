@@ -1,0 +1,64 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'publish',
+1 verbose cli   'jsonresume-theme-elegant-mobile/' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.32
+4 verbose publish [ 'jsonresume-theme-elegant-mobile/' ]
+5 verbose cache add [ 'jsonresume-theme-elegant-mobile/', null ]
+6 verbose cache add name=undefined spec="jsonresume-theme-elegant-mobile/" args=["jsonresume-theme-elegant-mobile/",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'jsonresume-theme-elegant-mobile/',
+7 verbose parsed url   path: 'jsonresume-theme-elegant-mobile/',
+7 verbose parsed url   href: 'jsonresume-theme-elegant-mobile/' }
+8 silly lockFile 2ce2ee45-jsonresume-theme-elegant-mobile jsonresume-theme-elegant-mobile/
+9 verbose lock jsonresume-theme-elegant-mobile/ /Users/Trevor/.npm/2ce2ee45-jsonresume-theme-elegant-mobile.lock
+10 info maybeGithub Attempting jsonresume-theme-elegant-mobile/ from git://github.com/jsonresume-theme-elegant-mobile/
+11 silly lockFile 327520f7--jsonresume-theme-elegant-mobile git://github.com/jsonresume-theme-elegant-mobile/
+12 verbose lock git://github.com/jsonresume-theme-elegant-mobile/ /Users/Trevor/.npm/327520f7--jsonresume-theme-elegant-mobile.lock
+13 verbose addRemoteGit [ 'git://github.com/jsonresume-theme-elegant-mobile/',
+13 verbose addRemoteGit   'master' ]
+14 verbose git clone git://github.com/jsonresume-theme-elegant-mobile/ Cloning into bare repository '/Users/Trevor/.npm/_git-remotes/git-github-com-jsonresume-theme-elegant-mobile--327520f7'...
+14 verbose git clone git://github.com/jsonresume-theme-elegant-mobile/
+14 verbose git clone git://github.com/jsonresume-theme-elegant-mobile/ fatal: remote error:
+14 verbose git clone git://github.com/jsonresume-theme-elegant-mobile/   Repository not found.
+15 silly lockFile 327520f7--jsonresume-theme-elegant-mobile git://github.com/jsonresume-theme-elegant-mobile/
+16 silly lockFile 327520f7--jsonresume-theme-elegant-mobile git://github.com/jsonresume-theme-elegant-mobile/
+17 info maybeGithub Attempting jsonresume-theme-elegant-mobile/ from git+ssh://git@github.com:jsonresume-theme-elegant-mobile/
+18 silly lockFile 11fd4084--jsonresume-theme-elegant-mobile git@github.com:jsonresume-theme-elegant-mobile/
+19 verbose lock git@github.com:jsonresume-theme-elegant-mobile/ /Users/Trevor/.npm/11fd4084--jsonresume-theme-elegant-mobile.lock
+20 verbose addRemoteGit [ 'git@github.com:jsonresume-theme-elegant-mobile/', 'master' ]
+21 error git clone git@github.com:jsonresume-theme-elegant-mobile/ Cloning into bare repository '/Users/Trevor/.npm/_git-remotes/git-github-com-jsonresume-theme-elegant-mobile--11fd4084'...
+21 error git clone git@github.com:jsonresume-theme-elegant-mobile/
+21 error git clone git@github.com:jsonresume-theme-elegant-mobile/ Permission denied (publickey).
+21 error git clone git@github.com:jsonresume-theme-elegant-mobile/ fatal: Could not read from remote repository.
+21 error git clone git@github.com:jsonresume-theme-elegant-mobile/
+21 error git clone git@github.com:jsonresume-theme-elegant-mobile/ Please make sure you have the correct access rights
+21 error git clone git@github.com:jsonresume-theme-elegant-mobile/ and the repository exists.
+22 silly lockFile 11fd4084--jsonresume-theme-elegant-mobile git@github.com:jsonresume-theme-elegant-mobile/
+23 silly lockFile 11fd4084--jsonresume-theme-elegant-mobile git@github.com:jsonresume-theme-elegant-mobile/
+24 silly lockFile 2ce2ee45-jsonresume-theme-elegant-mobile jsonresume-theme-elegant-mobile/
+25 silly lockFile 2ce2ee45-jsonresume-theme-elegant-mobile jsonresume-theme-elegant-mobile/
+26 error addLocal Could not install jsonresume-theme-elegant-mobile/
+27 error Error: ENOENT, stat 'jsonresume-theme-elegant-mobile/'
+28 error If you need help, you may report this *entire* log,
+28 error including the npm and node versions, at:
+28 error     <http://github.com/npm/npm/issues>
+29 error System Darwin 13.4.0
+30 error command "node" "/usr/local/bin/npm" "publish" "jsonresume-theme-elegant-mobile/"
+31 error cwd /Users/Trevor/git/jsonresume-theme-elegant-mobile
+32 error node -v v0.10.32
+33 error npm -v 1.4.28
+34 error path jsonresume-theme-elegant-mobile/
+35 error code ENOENT
+36 error errno 34
+37 verbose exit [ 34, true ]
