@@ -1,6 +1,6 @@
 {
-  "name": "jsonresume-theme-elegant",
-  "version": "0.1.8",
+  "name": "jsonresume-theme-elegant-mobile",
+  "version": "0.0.1",
   "description": "Elegant theme for jsonresume",
   "main": "index.js",
   "scripts": {
@@ -8,19 +8,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mudassir0909/jsonresume-theme-elegant.git"
+    "url": "https://github.com/trevorjones/jsonresume-theme-elegant"
   },
   "keywords": [
     "jsonresume",
     "theme",
     "elegant"
   ],
-  "author": "Mudassir Ali <mudassir.dev@gmail.com>",
+  "author": "Trevor Jones <trevorjones2k@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mudassir0909/jsonresume-theme-elegant/issues"
+    "url": "https://github.com/trevorjones/jsonresume-theme-elegant/issues"
   },
-  "homepage": "https://github.com/mudassir0909/jsonresume-theme-elegant",
+  "homepage": "https://github.com/trevorjones/jsonresume-theme-elegant",
   "dependencies": {
     "gravatar": "^1.0.6",
     "handlebars": "^2.0.0-alpha.4",

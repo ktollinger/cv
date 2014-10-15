@@ -2,7 +2,7 @@ Responsive theme for jsonresume inspired by card layouts.
 
 ### Contributing
 ```
-$ git clone https://github.com/mudassir0909/jsonresume-theme-elegant.git
+$ git clone https://github.com/trevorjones/jsonresume-theme-elegant
 $ cd jsonresume-theme-elegant
 $ npm install
 $ grunt watch // watches for less file changes
@@ -21,8 +21,4 @@ All the LESS files are organized under the folder `assets/less/`. Please go thro
 
 ### Updating Javascript
 All the javascript changes go into `index.js` which is responsible for rendering the theme.
-
-### Roadmap
-
-[https://github.com/mudassir0909/jsonresume-theme-elegant/labels/enhancement](https://github.com/mudassir0909/jsonresume-theme-elegant/labels/enhancement)
 
