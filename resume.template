@@ -5,8 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{{#resume.basics}}{{name}}{{/resume.basics}}</title>
-        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <style>
             {{{css}}}
         </style>
@@ -95,7 +95,7 @@
                                 {{/if}}
                                 {{#if githubUsername}}
                                     <a class="fa fa-github fa-2x social-link link-github"
-                                           href="http://www.github.com/{{githubUsername}}" target="_blank"></a>
+                                           href="https://www.github.com/{{githubUsername}}" target="_blank"></a>
                                 {{/if}}
                                 {{#if skypeHandle}}
                                     <a class="fa fa-skype fa-2x social-link link-skype"
@@ -103,7 +103,7 @@
                                 {{/if}}
                                 {{#if twitterHandle}}
                                     <a class="fa fa-twitter fa-2x social-link link-twitter"
-                                           href="http://www.twitter.com/{{twitterHandle}}" target="_blank"></a>
+                                           href="https://www.twitter.com/{{twitterHandle}}" target="_blank"></a>
                                 {{/if}}
                                 {{#if website}}
                                     <a class="fa fa-rss fa-2x social-link link-blog"
@@ -457,8 +457,8 @@
             </div>
         </div>
 
-        <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/tooltip.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/tooltip.js"></script>
     </body>
 </html>
