@@ -123,8 +123,9 @@
                                 </div>
                                 <div class="info">
                                     <h4 class="title text-uppercase">
-                                        About
+                                        {{localize "_LC_ABOUT" "About"}}
                                     </h4>
+                                    <h4></h4>
 
                                     <div class="content">
                                         {{resume.basics.summary}}
@@ -138,7 +139,7 @@
                                 </div>
                                 <div class="info">
                                     <h4 class="title text-uppercase">
-                                        Work Experience
+                                        {{localize "_LC_WORK_EXPERIENCE" "Work Experience"}}
                                     </h4>
 
                                     <ul class="list-unstyled">
@@ -158,13 +159,11 @@
 
                                                 <div class="sidebar text-muted text-center">
                                                     <p>
-                                                        <strong>Joined:</strong>&nbsp;
-                                                        {{startDate}}
+                                                        <strong>{{localize "_LC_JOINED" "Joined"}}:</strong>&nbsp;{{startDate}}
                                                     </p>
                                                     <p>
                                                         {{#if endDate}}
-                                                            <strong>Left:</strong>&nbsp;
-                                                            {{endDate}}
+                                                            <strong>{{localize "_LC_LEFT" "Left"}}:</strong>&nbsp;{{endDate}}
                                                         {{else}}
                                                             <span class="label label-success">
                                                                 Currently Working
@@ -188,7 +187,7 @@
                                 </div>
                                 <div class="info">
                                     <h4 class="title text-uppercase">
-                                        Skills
+                                        {{localize "_LC_SKILLS" "Skills"}}
                                     </h4>
 
                                     <div class="content">
@@ -223,7 +222,7 @@
                                 </div>
                                 <div class="info">
                                     <h4 class="title text-uppercase">
-                                        Education
+                                        {{localize "_LC_EDUCATION" "Education"}}
                                     </h4>
 
                                     <div class="content">
@@ -244,12 +243,12 @@
                                                     </div>
                                                     <div class="sidebar text-muted text-center">
                                                         <p>
-                                                            <strong>Started:</strong>&nbsp;
+                                                            <strong>{{localize "_LC_STARTED" "Started"}}:</strong>&nbsp;
                                                             {{startDate}}
                                                         </p>
                                                         <p>
                                                             {{#if endDate}}
-                                                                <strong>Completion:</strong>&nbsp;
+                                                                <strong>{{localize "_LC_COMPLETION" "Completion"}}:</strong>&nbsp;
                                                                 {{endDate}}
                                                             {{else}}
                                                                 <span class="label label-success">
@@ -268,11 +267,11 @@
                             {{#if resume.awards}}
                                 <div class="detail">
                                     <div class="icon">
-                                        <i class="fa fa-lg fa-trophy"></i>
+                                        <i class="fa fa-lg fa-book"></i>
                                     </div>
                                     <div class="info">
                                         <h4 class="title text-uppercase">
-                                            Awards
+                                        {{localize "_LC_AWARDS" "Awards"}}
                                         </h4>
 
                                         <div class="content">
@@ -288,7 +287,7 @@
                                                         </div>
                                                         <div class="sidebar text-muted text-center">
                                                             <p>
-                                                                <strong>Awarded on:</strong>&nbsp;
+                                                                <strong>{{localize "_LC_AWARDED_ON" "Awarded on"}}:</strong>&nbsp;
                                                                 {{date}}
                                                             </p>
                                                         </div>

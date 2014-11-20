@@ -17,12 +17,22 @@ function getNetwork(profiles, network_name) {
     });
 }
 
-function humanizeDuration ( moment_obj, did_leave_company ) {
+function plural(n, pl) {
+    if (n==1) {
+        return pl[0];
+    } else if (n>=2 && n<=4) {
+        return pl[1];
+    } else {
+        return pl[2];
+    }
+}
+
+function humanizeDuration ( config, moment_obj, did_leave_company ) {
     var days,
         months = moment_obj.months(),
         years = moment_obj.years(),
-        month_str = months > 1 ? 'months' : 'month',
-        year_str = years > 1 ? 'years' : 'year';
+        month_str = plural(months, config._PL_MONTHS || ['month','months','months']),
+        year_str = plural(years, config._PL_YEARS || ['year','years','years']);
 
     if ( months && years ) {
         return years + ' ' + year_str + ' ' + months + ' ' + month_str;
@@ -39,7 +49,7 @@ function humanizeDuration ( moment_obj, did_leave_company ) {
     if ( did_leave_company ) {
         days = moment_obj.days();
 
-        return ( days > 1 ? days + ' days' : days + ' day' );
+        return days + ' ' + plural(days, config._PL_DAYS || ['day','days','days']);
     } else {
         return 'Recently joined';
     }
@@ -53,8 +63,12 @@ function render(resume) {
         github_account = getNetwork(profiles, 'github'),
         linkedin_account = getNetwork(profiles, 'linkedin'),
         skype_account = getNetwork(profiles, 'skype'),
-        date_format = 'MMM, YYYY';
+        date_format = resume.basics._LC_DATE_FORMAT || 'MMM, YYYY';
 
+    Handlebars.registerHelper('localize', function(id, org) {
+        var result = resume.basics[id];
+        return result ? result : org;
+    });
 
     if (!resume.basics.picture && hasEmail(resume)) {
         resume.basics.picture = gravatar.url(resume.basics.email.replace('(at)', '@'), {
@@ -83,6 +97,7 @@ function render(resume) {
         did_leave_company = !! end_date;
         end_date = end_date || new Date();
         work_info.duration = humanizeDuration(
+            resume.basics,
             moment.duration( end_date.getTime() - start_date.getTime() ),
             did_leave_company )
     });
@@ -109,13 +124,13 @@ function render(resume) {
 
     _.each( resume.awards, function( award_info ) {
         if ( award_info.date ) {
-            award_info.date = moment( new Date( award_info.date ) ).format( 'MMM DD, YYYY' )
+            award_info.date = moment( new Date( award_info.date ) ).format( date_format )
         }
     });
 
     _.each( resume.publications, function( publication_info ) {
         if ( publication_info.releaseDate ) {
-            publication_info.releaseDate = moment( new Date( publication_info.releaseDate ) ).format( 'MMM DD, YYYY' )
+            publication_info.releaseDate = moment( new Date( publication_info.releaseDate ) ).format( date_format )
         }
     });
 
