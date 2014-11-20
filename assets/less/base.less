@@ -1,6 +1,14 @@
 @import "variables";
 @import "mixins";
 
+@media print {
+    a[href]:after {
+        content: " (" attr(href) ")";
+        font-size: 12px;
+        color: @icon-color;
+    }
+}
+
 body {
     font-family: 'Ek Mukta';
     background: @theme-bg;
