@@ -22,7 +22,7 @@
   border: 1px solid #357ebd;
 }
 body {
-  font-family: 'Lato';
+  font-family: 'Ek Mukta';
   background: #f0f0f0;
   color: #333333;
 }
@@ -117,7 +117,7 @@ body {
   }
   .card-wrapper {
     position: static;
-    width: auto;
+    width: 100%;
     top: 0;
   }
   hr {
