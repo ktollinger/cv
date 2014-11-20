@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Kamil Tollinger</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <style>
+            .clear-margin {
+  margin: 0;
+}
+.space-top {
+  margin-top: 10px;
+}
+.icon-left {
+  margin-right: 5px;
+}
+.icon-right {
+  margin-left: 5px;
+}
+.labels {
+  word-spacing: 5px;
+}
+.label-keyword {
+  display: inline-block;
+  background: #7eb0db;
+  color: white;
+  font-size: 0.9em;
+  padding: 5px;
+  border: 1px solid #357ebd;
+}
+@media print {
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 12px;
+    color: #707070;
+  }
+}
+body {
+  font-family: 'Ek Mukta';
+  background: #f0f0f0;
+  color: #333333;
+}
+.main {
+  padding: 5px;
+}
+.card {
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  min-height: 300px;
+  padding: 10px;
+}
+.card-nested {
+  min-height: 0;
+  margin-bottom: 10px;
+  border-width: 1px 0 0 0;
+}
+.background-card {
+  padding: 10px 20px;
+}
+.card-wrapper {
+  padding: 5px;
+}
+.text-bolder {
+  font-weight: bold;
+}
+.background-details .detail {
+  display: table;
+  padding: 10px 0;
+}
+.background-details .detail .icon {
+  min-width: 45px;
+  max-width: 45px;
+  text-align: center;
+}
+.background-details .detail .info {
+  width: 100%;
+}
+.background-details .detail .title,
+.background-details .detail .icon {
+  color: #707070;
+}
+.background-details .detail .icon,
+.background-details .detail .info {
+  display: table-cell;
+  padding: 0 10px;
+}
+.info .content.has-sidebar {
+  width: 80%;
+  box-sizing: border-box;
+  float: left;
+  padding: 0 10px;
+  border-right: 1px solid #cdcdcd;
+}
+.info .sidebar {
+  margin-left: 80%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+.profile-pic {
+  padding: 20px 0;
+}
+.contact-details .detail {
+  display: table;
+  padding: 10px 0;
+}
+.contact-details .detail .icon {
+  padding: 0 10px;
+  color: #707070;
+}
+.contact-details .detail .info {
+  font-size: 1em;
+}
+.contact-details .detail .icon,
+.contact-details .detail .info {
+  display: table-cell;
+  vertical-align: middle;
+}
+@media (max-width: 992px) {
+  .profile-card {
+    min-height: 180px !important;
+  }
+  .profile-card .detail {
+    display: inline-block !important;
+  }
+  .profile-card .contact-details {
+    text-align: center !important;
+  }
+  .profile-card .social-links {
+    padding-top: 10px;
+  }
+  .card-wrapper {
+    position: static;
+    width: 100%;
+    top: 0;
+  }
+  hr {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+  }
+}
+.social-link {
+  margin-left: 5px;
+}
+.social-link:first-child {
+  margin-left: 0;
+}
+.social-link:hover {
+  text-decoration: none;
+}
+.link-github {
+  color: #454545;
+}
+.link-github:hover {
+  color: #2b2b2b;
+}
+.link-twitter {
+  color: #55acee;
+}
+.link-twitter:hover {
+  color: #2795e9;
+}
+.link-blog {
+  color: #f36f24;
+}
+.link-blog:hover {
+  color: #d8560c;
+}
+.link-linkedin {
+  color: #007bb6;
+}
+.link-linkedin:hover {
+  color: #005983;
+}
+.link-skype {
+  color: #12a5f4;
+}
+.link-skype:hover {
+  color: #0986ca;
+}
+.card-skills {
+  position: relative;
+}
+.skill-level {
+  border-radius: 3px;
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 0;
+  width: 10px;
+  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.2);
+}
+.skill-level .skill-progress {
+  position: absolute;
+  border-radius: 3px;
+  bottom: 0;
+  width: 100%;
+  -webkit-transition: height 1s ease;
+}
+.skill-level .skill-progress.beginner {
+  height: 50%;
+  background: #e74c3c;
+}
+.skill-level .skill-progress.intermediate {
+  height: 70%;
+  background: #f1c40f;
+}
+.skill-level .skill-progress.advanced {
+  height: 80%;
+  background: #428bca;
+}
+.skill-level .skill-progress.master {
+  height: 95%;
+  background: #5cb85c;
+}
+.skill-info {
+  margin-left: 10px;
+}
+
+        </style>
+    </head>
+
+    <body>
+        <script>
+            window.onload = function () {
+                $( ".background-card" ).css( "min-height", window.screen.availHeight + "px" );
+                $( ".js-tooltip" ).tooltip();
+            }
+        </script>
+        <div class="container-fluid">
+            <div class="row main clearfix">
+                <section class="col-md-3 card-wrapper">
+                    <div class="card profile-card">
+                        <div class="profile-pic">
+                            <img class="media-object img-circle center-block"  data-src="holder.js/64x64"
+                                alt="64x64" src="data:image/jpg;base64,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" style="width: 100px; height: 100px;">
+                        </div>
+                            <h3 class="text-center text-bolder"> Kamil Tollinger</h3>
+                            <h5 class="text-muted text-center">Senior Java &amp; Web vývojář</h5>
+                            <hr>
+
+                            <div class="contact-details clearfix">
+
+                                    <div class="detail">
+                                        <span class="icon">
+                                            <i class="fa fa-lg fa-location-arrow"></i>
+                                        </span>
+
+                                            <span class="info">
+                                                Praha, Česká republika,
+                                                CZ
+                                            </span>
+                                    </div>
+
+                                    <div class="detail">
+                                        <span class="icon">
+                                            <i class="fa fa-lg fa-phone"></i>
+                                        </span>
+
+                                        <span class="info">
+                                            +420 602 278 282
+                                        </span>
+                                    </div>
+
+                                    <div class="detail">
+                                        <span class="icon">
+                                            <i class="fa fa-lg fa-envelope"></i>
+                                        </span>
+
+                                        <span class="info">
+                                            kamil.tollinger@gmail.com
+                                        </span>
+                                    </div>
+
+                                    <div class="detail">
+                                        <span class="icon" title="Languages I speak">
+                                            <i class="fa fa-lg fa-language"></i>
+                                        </span>
+
+                                        <span class="info">
+                                            Čeština, Angličtina, Ruština
+                                        </span>
+                                    </div>
+                            </div>
+
+                            <hr>
+
+                            <div class="social-links text-center">
+                                    <a class="fa fa-linkedin fa-lg social-link link-linkedin"
+                                           href="http://cz.linkedin.com/in/ktollinger" target="_blank"></a>
+                                    <a class="fa fa-github fa-lg social-link link-github"
+                                           href="https://www.github.com/ktollinger" target="_blank"></a>
+                            </div>
+                    </div>
+                </section>
+
+                <section class="col-md-9 card-wrapper pull-right">
+                    <div class="card background-card">
+                        <div class="background-details">
+                            <div class="detail">
+                                <div class="icon">
+                                    <i class="fa fa-lg fa-user"></i>
+                                </div>
+                                <div class="info">
+                                    <h4 class="title text-uppercase">
+                                        O mě
+                                    </h4>
+                                    <h4></h4>
+
+                                    <div class="content">
+                                        Zkušený vývojář pro multiplatformním prostředí, zaměřuji se zejména na jazyk Java s související technologie. Rád se podílím na hledání vhodného řešení. Vítám možnost přímé komunikace s koncovými uživateli dodávaného řešení. Nesu odpovědnost za důsledky svých rozhodnutí.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="detail">
+                                <div class="icon">
+                                    <i class="fa fa-lg fa-building"></i>
+                                </div>
+                                <div class="info">
+                                    <h4 class="title text-uppercase">
+                                        Pracovní zkušenosti
+                                    </h4>
+
+                                    <ul class="list-unstyled">
+                                            <li class="card card-nested clearfix">
+                                                <div class="content has-sidebar">
+                                                    <p><strong>Senior vývojář, analytik, architekt</strong>,&nbsp;OSVČ</p>
+                                                    <p>Práce na projektech různého rozshau a velikosti. Vždy se jednalo o webové aplikace provozované na aplikačním kontejneru (Java). Fáze od sběru požadavků v prostředí zákazníků, nastavení podmínek pro akceptaci řešení, návrh architektury řešní, implementace, tvorba technické dokumentace.</p>
+                                                        <ul>
+                                                                <li> 2014: Aplikace pro evidenci a schvalování (workflow) dokumentů v prostředí Google Cloud (Java, REST/Jersey, AngularJS). </li>
+                                                                <li> 2013: Analýza a vývoj (Java) knihovny pro zpracování dat z Katastru nemovitostí — konverze datových stuktur a generování tiskového výstupu (pdf) pro Oracle WebLogic. </li>
+                                                                <li> 2012: Analýza a vývoj (Java) komponenty pro generování reportů — data z SQL databáze, výstup vygenerován pomocí Apache/FOP (pdf) a Apache/POI (xls). </li>
+                                                                <li> 2010: Vývoj uživatelské konzole k dohledovému systému (Java/Swing), pro pracovníky technické podpory (help-desk). </li>
+                                                                <li> Business analýza, definice zadání a nastavení rozsahu řešení. </li>
+                                                                <li> Návrh technického řešení jednotlivých prvků a vlastní realizace řešení. </li>
+                                                                <li> Řízení projektů s pomocí agilních technik (Kanban). </li>
+                                                                <li> Odpovědnost za dodání výstupů (software, dokumentace) k akceptačním testům. </li>
+                                                        </ul>
+                                                </div>
+
+                                                <div class="sidebar text-muted text-center">
+                                                    <p>
+                                                        <strong>Od:</strong>&nbsp;2009
+                                                    </p>
+                                                    <p>
+                                                            <strong>Do:</strong>&nbsp;2014
+                                                    </p>
+                                                    <p>
+                                                        <i class="fa fa-clock-o icon-left"></i>
+                                                        5 roků
+                                                    </p>
+                                                </div>
+                                            </li>
+                                            <li class="card card-nested clearfix">
+                                                <div class="content has-sidebar">
+                                                    <p><strong>Vedoucí vývoje, vývojář (Java)</strong>,&nbsp;StringData, s.r.o.</p>
+                                                    <p>Řízení vývojového týmu a odpovědnost za vývoj systému pro provádění dohledu a vyhodnocování dostupnosti aplikací, služeb a infrastruktury.</p>
+                                                        <ul>
+                                                                <li> Vedení týmu vývojářů. </li>
+                                                                <li> Definice cílové architektury. </li>
+                                                                <li> Vedení vývoje produktu. </li>
+                                                        </ul>
+                                                </div>
+
+                                                <div class="sidebar text-muted text-center">
+                                                    <p>
+                                                        <strong>Od:</strong>&nbsp;2007
+                                                    </p>
+                                                    <p>
+                                                            <strong>Do:</strong>&nbsp;2009
+                                                    </p>
+                                                    <p>
+                                                        <i class="fa fa-clock-o icon-left"></i>
+                                                        2 roky
+                                                    </p>
+                                                </div>
+                                            </li>
+                                            <li class="card card-nested clearfix">
+                                                <div class="content has-sidebar">
+                                                    <p><strong>Vedoucí vývoje, vývojář (pascal, assembler, Java)</strong>,&nbsp;A&amp;&amp;L Soft, s.r.o.</p>
+                                                    <p>Vedení týmu vývojářů. Návrh a velká část implementace nové verze systému elektronického bankovnictví platformě MS Windows.</p>
+                                                        <ul>
+                                                                <li> Odpovědnost za řešení bezpečnostního modelu aplikace </li>
+                                                                <li> Implementace bezpečnostních algoritmů — šifrování, digitální podpisy </li>
+                                                                <li> Řešení integrace s bankovními systémy (řada bank v České republice i na Slovensku) </li>
+                                                                <li> Návrh a implementace bezpečnostních prvků pro autorizaci a autentizaci plateb </li>
+                                                                <li> Řešení zabezpečení aplikací pomocí HW šifrátoru (Eracom, OTP Bank) </li>
+                                                                <li> Návrh a implementace mobilní aplikace — mobile banking, Java/J2ME </li>
+                                                        </ul>
+                                                </div>
+
+                                                <div class="sidebar text-muted text-center">
+                                                    <p>
+                                                        <strong>Od:</strong>&nbsp;2002
+                                                    </p>
+                                                    <p>
+                                                            <strong>Do:</strong>&nbsp;2007
+                                                    </p>
+                                                    <p>
+                                                        <i class="fa fa-clock-o icon-left"></i>
+                                                        5 roků
+                                                    </p>
+                                                </div>
+                                            </li>
+                                            <li class="card card-nested clearfix">
+                                                <div class="content has-sidebar">
+                                                    <p><strong>Progarmátor (pascal, assembler), Správce sítě Novell Netware</strong>,&nbsp;A&amp;&amp;L Soft, s.r.o.</p>
+                                                    <p>Vývoj některých částí systému elektronického bankovnictví (MS DOS).</p>
+                                                        <ul>
+                                                                <li> Řešení integrace s bankovními systémy (řada bank v České republice i na Slovensku) </li>
+                                                                <li> Správa lokální sítě Novell Netware </li>
+                                                                <li> Příprava finální verze produktů pro distribuci zákazníkům. </li>
+                                                                <li> Implementace asymetrického šifrování RSA pro AS/400 (ANSI C). </li>
+                                                        </ul>
+                                                </div>
+
+                                                <div class="sidebar text-muted text-center">
+                                                    <p>
+                                                        <strong>Od:</strong>&nbsp;1996
+                                                    </p>
+                                                    <p>
+                                                            <strong>Do:</strong>&nbsp;2000
+                                                    </p>
+                                                    <p>
+                                                        <i class="fa fa-clock-o icon-left"></i>
+                                                        4 roky
+                                                    </p>
+                                                </div>
+                                            </li>
+                                            <li class="card card-nested clearfix">
+                                                <div class="content has-sidebar">
+                                                    <p><strong>Techická podpora, Tvorba uživatelské a instalační dokumentace</strong>,&nbsp;A&amp;&amp;L Soft, s.r.o.</p>
+                                                    <p>Podpora produktu pro zajištění bezpečné komunikace po telefonních linkách (Metnet)</p>
+                                                        <ul>
+                                                                <li> Komunikace se zákazníky </li>
+                                                                <li> Servis — na dálku i u zákazníků </li>
+                                                                <li> Technická podpora </li>
+                                                                <li> Tvorba uživatelské a technické dokumentace (LaTex) </li>
+                                                                <li> Psaní řídích skriptů </li>
+                                                        </ul>
+                                                </div>
+
+                                                <div class="sidebar text-muted text-center">
+                                                    <p>
+                                                        <strong>Od:</strong>&nbsp;1993
+                                                    </p>
+                                                    <p>
+                                                            <strong>Do:</strong>&nbsp;1995
+                                                    </p>
+                                                    <p>
+                                                        <i class="fa fa-clock-o icon-left"></i>
+                                                        2 roky
+                                                    </p>
+                                                </div>
+                                            </li>
+                                            <li class="card card-nested clearfix">
+                                                <div class="content has-sidebar">
+                                                    <p><strong>Technik</strong>,&nbsp;NB Plus, s.r.o.</p>
+                                                    <p>Práce ve firmě zajišťující stavbu, prodej a service výpočetní techniky.</p>
+                                                        <ul>
+                                                                <li> Zákaznický servis. </li>
+                                                                <li> Komunikace s dodavateli. </li>
+                                                                <li> Návrhy počítačových sestav a lokálních sítí. </li>
+                                                        </ul>
+                                                </div>
+
+                                                <div class="sidebar text-muted text-center">
+                                                    <p>
+                                                        <strong>Od:</strong>&nbsp;1990
+                                                    </p>
+                                                    <p>
+                                                            <strong>Do:</strong>&nbsp;1993
+                                                    </p>
+                                                    <p>
+                                                        <i class="fa fa-clock-o icon-left"></i>
+                                                        3 roky
+                                                    </p>
+                                                </div>
+                                            </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="detail">
+                                <div class="icon">
+                                    <i class="fa fa-lg fa-code"></i>
+                                </div>
+                                <div class="info">
+                                    <h4 class="title text-uppercase">
+                                        Dovednosti
+                                    </h4>
+
+                                    <div class="content">
+                                        <ul class="list-unstyled">
+                                                <li class="card card-nested card-skills">
+                                                        <div class="skill-level js-tooltip" title="Master" data-placement="left">
+                                                            <div class="skill-progress master">
+                                                            </div>
+                                                        </div>
+                                                    <div class="skill-info">
+                                                        <strong>Vývoj v jazyce Java (sedm let)</strong>
+
+                                                        <div class="space-top labels">
+                                                                <span class="label label-keyword">Java 7/8</span>
+                                                                <span class="label label-keyword">REST/Jersey</span>
+                                                                <span class="label label-keyword">Spring Framework</span>
+                                                                <span class="label label-keyword">JDBC</span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="card card-nested card-skills">
+                                                        <div class="skill-level js-tooltip" title="Master" data-placement="left">
+                                                            <div class="skill-progress master">
+                                                            </div>
+                                                        </div>
+                                                    <div class="skill-info">
+                                                        <strong>Zkušenosti s vývojem a provozem aplikací v prostředí Google Cloud</strong>
+
+                                                        <div class="space-top labels">
+                                                                <span class="label label-keyword">AppEngine</span>
+                                                                <span class="label label-keyword">Google API</span>
+                                                                <span class="label label-keyword">Datastore</span>
+                                                                <span class="label label-keyword">Objectify</span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="card card-nested card-skills">
+                                                        <div class="skill-level js-tooltip" title="Master" data-placement="left">
+                                                            <div class="skill-progress master">
+                                                            </div>
+                                                        </div>
+                                                    <div class="skill-info">
+                                                        <strong>Aktivní používání nástrojů pro řízení a kontrolu kvality vývoje</strong>
+
+                                                        <div class="space-top labels">
+                                                                <span class="label label-keyword">Jira</span>
+                                                                <span class="label label-keyword">HudsonCI</span>
+                                                                <span class="label label-keyword">JUnit</span>
+                                                                <span class="label label-keyword">Maven</span>
+                                                                <span class="label label-keyword">Gradle</span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="card card-nested card-skills">
+                                                        <div class="skill-level js-tooltip" title="Master" data-placement="left">
+                                                            <div class="skill-progress master">
+                                                            </div>
+                                                        </div>
+                                                    <div class="skill-info">
+                                                        <strong>Vývoj webových aplikací</strong>
+
+                                                        <div class="space-top labels">
+                                                                <span class="label label-keyword">AngularJS</span>
+                                                                <span class="label label-keyword">html</span>
+                                                                <span class="label label-keyword">css</span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="card card-nested card-skills">
+                                                        <div class="skill-level js-tooltip" title="Intermediate" data-placement="left">
+                                                            <div class="skill-progress intermediate">
+                                                            </div>
+                                                        </div>
+                                                    <div class="skill-info">
+                                                        <strong>Vývoj aplikací pro mobilní platformy</strong>
+
+                                                        <div class="space-top labels">
+                                                                <span class="label label-keyword">Android SDK</span>
+                                                                <span class="label label-keyword">Cordova</span>
+                                                                <span class="label label-keyword">AngularJS</span>
+                                                                <span class="label label-keyword">Ionic</span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="detail">
+                                <div class="icon">
+                                    <i class="fa fa-lg fa-mortar-board"></i>
+                                </div>
+                                <div class="info">
+                                    <h4 class="title text-uppercase">
+                                        Vzdělání
+                                    </h4>
+
+                                    <div class="content">
+                                        <ul class="list-unstyled">
+                                                <li class="card card-nested">
+                                                    <div class="content has-sidebar">
+                                                        <p>
+                                                            <strong>Elektrotechnika, Střední s maturitou</strong>,&nbsp;
+                                                            Střední průmyslová škola strojní a elektrotechnická
+                                                        </p>
+                                                        <i></i>
+                                                        <div class="space-top labels">
+                                                                <span class="label label-keyword">Elektrotechnika</span>
+                                                                <span class="label label-keyword">Energetika</span>
+                                                                <span class="label label-keyword">Český jazyk</span>
+                                                                <span class="label label-keyword">Ruský jazyk</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sidebar text-muted text-center">
+                                                        <p>
+                                                            <strong>Zahájení:</strong>&nbsp;
+                                                            1984
+                                                        </p>
+                                                        <p>
+                                                                <strong>Dokončení:</strong>&nbsp;
+                                                                1988
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                                <div class="detail">
+                                    <div class="icon">
+                                        <i class="fa fa-lg fa-book"></i>
+                                    </div>
+                                    <div class="info">
+                                        <h4 class="title text-uppercase">
+                                        Kurzy
+                                        </h4>
+
+                                        <div class="content">
+                                            <ul class="list-unstyled">
+                                                    <li class="card card-nested">
+                                                        <div class="content has-sidebar">
+                                                            <p>
+                                                                <strong>EJB 3.1 – komponenty tvoříme rychle a efektivně</strong>,&nbsp;
+                                                                TrainTime
+                                                            </p>
+                                                            <p class="clear-margin"> Kurs s certifikátem. </p>
+                                                        </div>
+                                                        <div class="sidebar text-muted text-center">
+                                                            <p>
+                                                                <strong>Termín:</strong>&nbsp;
+                                                                2012
+                                                            </p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="card card-nested">
+                                                        <div class="content has-sidebar">
+                                                            <p>
+                                                                <strong>Facilitace workshopů a diskusí</strong>,&nbsp;
+                                                                Konsens
+                                                            </p>
+                                                            <p class="clear-margin"> Kurs s certifikátem. </p>
+                                                        </div>
+                                                        <div class="sidebar text-muted text-center">
+                                                            <p>
+                                                                <strong>Termín:</strong>&nbsp;
+                                                                2012
+                                                            </p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="card card-nested">
+                                                        <div class="content has-sidebar">
+                                                            <p>
+                                                                <strong>Modelování pomocí UML</strong>,&nbsp;
+                                                                LBMS
+                                                            </p>
+                                                            <p class="clear-margin"> Kurs s certifikátem. </p>
+                                                        </div>
+                                                        <div class="sidebar text-muted text-center">
+                                                            <p>
+                                                                <strong>Termín:</strong>&nbsp;
+                                                                2006
+                                                            </p>
+                                                        </div>
+                                                    </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <link href='https://fonts.googleapis.com/css?family=Ek+Mukta' rel='stylesheet' type='text/css'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/tooltip.js"></script>
+    </body>
+</html>
